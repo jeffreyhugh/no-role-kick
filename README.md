@@ -20,7 +20,7 @@ To get your bot's token, please refer to the guide at https://q5f.net/tutorial/d
 If you need help with any aspect of this bot, please join the Q5F Development server at https://discord.gg/j7t2erX
 
 ## license
-You are free to use, share, modify, redistribute, or monetize this code, in part or full, with the stipulation that credit is partially given to the original author.
+You are free to use, share, modify, redistribute, or monetize this code, in part or full, with the stipulation that derivatives give partial credit to the original author.
 
 ex. "Code originally written by QueueBot, modified by <your_name_here>"
 
