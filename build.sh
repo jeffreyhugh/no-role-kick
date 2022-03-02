@@ -7,6 +7,6 @@ cowsay "Building Windows (amd64)..."
 env GOOS=windows GOARCH=amd64 go build -o bin/no-role-kick-windows-amd64.exe
 
 cowsay "Building MacOS (amd64)..."
-env GOOS=darwin GOARCH=amd64 go build -o bin/darwin/no-role-kick-darwin-amd64
+env GOOS=darwin GOARCH=amd64 go build -o bin/no-role-kick-darwin-amd64
 
 cowsay "Build complete!"
