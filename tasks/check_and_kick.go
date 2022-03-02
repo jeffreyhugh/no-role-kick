@@ -20,15 +20,31 @@ func CheckAndKick(s *discordgo.Session) {
 
 	for _, row := range rows {
 		row.Completed = true
+		if member, err := s.GuildMember(row.GuildID, row.UserID); err != nil {
+			gologger.Warn("Could not fetch user from guild", err, logrus.Fields{
+				"userID":  row.UserID,
+				"guildID": row.GuildID,
+			})
+			continue
+		} else if member == nil || len(member.Roles) > 0 {
+			gologger.Info("Did not kick user", logrus.Fields{
+				"userID":    row.UserID,
+				"guildID":   row.GuildID,
+				"roleCount": len(member.Roles),
+			})
+			continue
+		}
+
 		err := s.GuildMemberDeleteWithReason(row.GuildID, row.UserID, fmt.Sprintf("%s did not have a role after %s seconds", row.UserID, os.Getenv("NRK_KICK_TIME")))
 		if err != nil {
 			gologger.Error("Could not kick user", err, logrus.Fields{
 				"userID":  row.UserID,
 				"guildID": row.GuildID,
 			})
-			return
+			continue
 		}
 		row.Kicked = true
+
 		gologger.Info("Kicked user", logrus.Fields{
 			"userID":  row.UserID,
 			"guildID": row.GuildID,

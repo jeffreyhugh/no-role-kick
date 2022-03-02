@@ -5,7 +5,7 @@ Once a user joins, this bot will wait a specified amount of time.
 If the new member does not have any roles at the end of the specified period, they will be kicked. 
 
 ## Hosting
-This bot is written in Go. I personally have tested Go 1.17.6.
+This bot is written in Go. I personally have tested Go 1.17.6 (Arch Linux x86_64).
 
 Please see the [releases](https://github.com/qbxt/no-role-kick/releases) for the latest standalone executable.
 
