@@ -19,7 +19,8 @@ Please see `nrk.env.template`.
 git clone github.com/qbxt/no-role-kick
 cd no-role-kick
 go build
-./no-role-kick```
+./no-role-kick
+```
 
 ## License
 Licensed under the "Unlicense" license.
