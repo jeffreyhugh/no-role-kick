@@ -1,6 +1,8 @@
 .vscode/
+
 .env
 *.env
 *.sqlite
 *.db
-no-role-kick
+
+bin
