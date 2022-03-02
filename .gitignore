@@ -3,3 +3,4 @@
 *.env
 *.sqlite
 *.db
+no-role-kick
